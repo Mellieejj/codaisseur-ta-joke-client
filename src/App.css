@@ -1,0 +1,18 @@
+body {
+  background-color: #59B18C;
+  display: flex;
+  justify-content: center;
+  font-family: Roboto;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.Joke {
+  border: 1px solid #008080;
+  background-color: rgba(252,252,252, 0.75); 
+}
+
+.Joke p {
+  margin-left: 10px;
+  margin-right: 10px;
+}

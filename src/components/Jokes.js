@@ -87,9 +87,16 @@ export default class Jokes extends Component {
     console.log(this.state);
 
     return (
-      <div>
-        <h2>{this.state.currentJoke ? this.state.currentJoke.setup : null}</h2>
-        <h3>{this.state.timeout ? this.state.currentJoke.punchline : null}</h3>
+      <div className="Joke">
+          {" "}
+          <p>
+            {this.state.currentJoke
+              ? this.state.currentJoke.setup
+              : "Loading.... "}
+          </p>
+          <p>
+            {this.state.timeout ? this.state.currentJoke.punchline : null}
+          </p>
       </div>
     );
   }
