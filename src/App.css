@@ -1,15 +1,33 @@
 body {
   background-color: #59B18C;
-  display: flex;
-  justify-content: center;
   font-family: Roboto;
   font-size: 2rem;
   text-align: center;
+}
+.navbar {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.title {
+  color: #b1597e;
+  font-weight: bold;
+}
+
+.auth {
+  border: 1px solid #b1597e;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .Joke {
   border: 1px solid #008080;
   background-color: rgba(252,252,252, 0.75); 
+  max-width: 50%;
+  display: inline-block;
+  align-self: center;
+  margin-top: 2rem
 }
 
 .Joke p {
