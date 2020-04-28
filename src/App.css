@@ -1,5 +1,5 @@
 body {
-  background-color: #59B18C;
+  background: linear-gradient(to left, #59b18c 0%, #ff99cc 100%);
   font-family: Roboto;
   font-size: 2rem;
   text-align: center;
@@ -11,7 +11,7 @@ body {
 }
 
 .title {
-  color: #b1597e;
+  color: #ffffff;
   font-weight: bold;
 }
 
@@ -23,11 +23,13 @@ body {
 
 .Joke {
   border: 1px solid #008080;
-  background-color: rgba(252,252,252, 0.75); 
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgba(252, 252, 252, 0.75);
   max-width: 50%;
   display: inline-block;
   align-self: center;
-  margin-top: 2rem
+  margin-top: 2rem;
 }
 
 .Joke p {

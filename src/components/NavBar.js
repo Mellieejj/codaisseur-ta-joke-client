@@ -1,11 +1,11 @@
 import React from "react"
+import AuthContainer from "./AuthContainer"
 
 const NavBar = () => {
  return (
    <div className="navbar">
      <div className="title">Programming Jokes</div>
-     {/* <div className="auth">Login</div>
-     <div className="auth">Sign-up</div> */}
+   <AuthContainer />
   </div>
  )
 }

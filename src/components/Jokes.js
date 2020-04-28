@@ -6,8 +6,7 @@ import ShareButtons from "./ShareButtons";
 class Jokes extends Component {
   state = {
     timeout: false,
-
-    currentJoke: null,
+    // currentJoke: null,
   };
 
   componentDidMount() {
