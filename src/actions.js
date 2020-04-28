@@ -21,7 +21,6 @@ export const getJoke = () =>(dispatch, getState) => {
     .catch(console.error)
   }
 
-
   // sign up a user
 export const ADD_USER = "ADD_USER"
 
@@ -34,12 +33,33 @@ const addUser = () => {
 export function signup(data) {
   return async function(dispatch) {
     try {
-      await request.post(`${baseUrl}/users`).send(data);
+      await request.post(`${baseUrl}/user`).send(data);
       const action = addUser();
       await dispatch(action);
-      
     } catch (error) {
       console.log(error)
     }
   };
+}
+
+// login
+export const JWT = "JWT"
+
+export const loginUser = payload => {
+  return {
+    type: JWT,
+    payload
+  };
+};
+
+export function login(data) {
+  return async function(dispatch) {
+    try {
+      const response = await request.post(`${baseUrl}/login`).send(data);
+      const action = loginUser(response.body.jwt);
+      await dispatch(action);
+      } catch (error) {
+        console.log(error)
+    }
+  }
 }

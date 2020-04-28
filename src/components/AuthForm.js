@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class AuthForm extends Component {
   render() {
     return (
-      <form onsubmit={this.props.onSubmit}>
+      <form onSubmit={this.props.onSubmit}>
         <input
           type="text"
           placeholder="Name"
