@@ -1,4 +1,4 @@
-import { RANDOM_JOKE } from "../actions";
+import { RANDOM_JOKE } from "../actions/jokesActions";
 
 export default function (state = null, action = {}) {
   switch (action.type) {

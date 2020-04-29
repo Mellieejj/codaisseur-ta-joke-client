@@ -5,6 +5,7 @@ export default class AuthForm extends Component {
     return (
       <form onSubmit={this.props.onSubmit}>
         <input
+        className="form-control form-control-lg custom-form"
           type="text"
           placeholder="Name"
           name="name"
@@ -12,6 +13,7 @@ export default class AuthForm extends Component {
           onChange={this.props.onChange}
         />
         <input
+        className="form-control form-control-lg custom-form"
           type="password"
           placeholder="Password"
           name="password"
@@ -19,7 +21,7 @@ export default class AuthForm extends Component {
           onChange={this.props.onChange}
         />
 
-        <button type="submit">{this.props.buttonName}</button>
+        <button className="btn btn-outline-default btn-lg btn-dark" type="submit">{this.props.buttonName}</button>
       </form>
     );
   }

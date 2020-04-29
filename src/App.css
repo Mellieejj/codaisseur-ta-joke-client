@@ -4,21 +4,19 @@ body {
   font-size: 2rem;
   text-align: center;
 }
+.App {
+  display: flex;
+}
 .navbar {
   color: #ffffff;
-  display: flex;
-  justify-content: space-evenly;
+  display: block;
+  width: 20%;
 }
 
 .title {
   color: #ffffff;
   font-weight: bold;
-}
-
-.auth {
-  border: 1px solid #b1597e;
-  padding-left: 10px;
-  padding-right: 10px;
+  font-size: 2.5rem;
 }
 
 .Joke {
@@ -26,13 +24,18 @@ body {
   border-radius: 25px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: rgba(252, 252, 252, 0.75);
-  max-width: 50%;
+  width: 70%;
   display: inline-block;
   align-self: center;
-  margin-top: 2rem;
+  
+  margin: 10% auto;
 }
 
 .Joke p {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.auth {
+  margin-top: 10px;
 }

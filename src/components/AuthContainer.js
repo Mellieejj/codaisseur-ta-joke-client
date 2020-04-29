@@ -8,6 +8,7 @@ class AuthContainer extends Component {
     if(!this.props.user){
     return (
       <div>
+        <p>{this.props.errors ? this.props.errors : null}</p>
         <LoginContainer />
         <SignupContainer />
       </div>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import AuthForm from "./AuthForm";
 import { connect } from "react-redux";
-import { login } from "../actions";
+import { login } from "../actions/userActions";
 
 class SignupContainer extends Component {
   state = {
@@ -23,7 +23,7 @@ class SignupContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className="auth">
         <AuthForm
           onSubmit={this.onSubmit}
           onChange={this.onChange}
