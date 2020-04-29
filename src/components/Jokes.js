@@ -20,8 +20,8 @@ class Jokes extends Component {
   render() {
     const { joke } = this.props;
     return (
-      <div className="Joke">
-        <div >
+      <div className="jokeContainer">
+        <div className="joke">
           <p>{joke ? joke[0].setup : "Loading a joke for you.... "}</p>
           <p>{this.state.timeout ? joke[0].punchline : null}</p>
         </div>

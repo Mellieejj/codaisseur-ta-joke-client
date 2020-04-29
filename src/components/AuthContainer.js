@@ -5,7 +5,7 @@ import LoginContainer from "./LoginContainer";
 
 class AuthContainer extends Component {
   render() {
-    if(!this.props.user){
+    if(!this.props.user.jwt){
     return (
       <div>
         <p>{this.props.errors ? this.props.errors : null}</p>
@@ -13,7 +13,11 @@ class AuthContainer extends Component {
         <SignupContainer />
       </div>
     )}else {
-      return null
+      return (
+        <div>
+          <p>Hi {this.props.user.name}</p>
+        </div>
+      )
     }
   }
 }
