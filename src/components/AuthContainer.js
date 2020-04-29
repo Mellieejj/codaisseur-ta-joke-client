@@ -8,7 +8,7 @@ class AuthContainer extends Component {
     if(!this.props.user.jwt){
     return (
       <div>
-        <p>{this.props.errors ? this.props.errors : null}</p>
+        <p className="error">{this.props.errors ? this.props.errors : null}</p>
         <LoginContainer />
         <SignupContainer />
       </div>

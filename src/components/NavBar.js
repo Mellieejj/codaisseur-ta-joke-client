@@ -1,11 +1,13 @@
 import React from "react"
 import AuthContainer from "./AuthContainer"
+import AddJokeContainer from "./AddJokeContainer"
 
 const NavBar = () => {
  return (
    <div className="navbar">
      <div className="title">Programming Jokes</div>
    <div><AuthContainer /></div>
+   <div><AddJokeContainer /></div>
   </div>
  )
 }

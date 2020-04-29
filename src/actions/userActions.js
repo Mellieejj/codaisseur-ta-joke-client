@@ -40,7 +40,6 @@ export function signup(data) {
       dispatch(displayError("You can login now!"));
     } catch (error) {
       if (error.response) {
-        console.log(error.response.body);
         const errorMessage = displayError(error.response.body.message);
         dispatch(errorMessage);
       } else {
