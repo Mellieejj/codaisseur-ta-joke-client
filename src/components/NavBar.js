@@ -2,7 +2,7 @@ import React from "react";
 import AuthContainer from "./AuthContainer";
 import AddJokeContainer from "./AddJokeContainer";
 
-const NavBar = () => {
+function NavBar () {
   return (
     <div className="navbar">
       <div className="title">Programming Jokes</div>
