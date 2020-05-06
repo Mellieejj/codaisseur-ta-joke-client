@@ -1,53 +1,42 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import {addJoke} from "../actions/jokesActions"
+import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { addJoke } from "../actions/jokesActions";
 
 import AddJokeForm from "./AddJokeForm";
 
-class AddJokeContainer extends Component {
-  state = {
-    setup: "",
-    punchline: "",
-  };
+function AddJokeContainer(props) {
+  const initialJoke = { setup: "", punchline: "" };
+  const [joke, setJoke] = useState(initialJoke);
 
-  onSubmit = (event) => {
+  const user = useSelector((state) => state.user);
+  const errors = useSelector((state) => state.errors);
+  const dispatch = useDispatch()
+  
+  const onSubmit = (event) => {
     event.preventDefault();
-    this.props.addJoke(this.state);
-    this.setState({ setup: "", punchline: "" });
+    dispatch(addJoke(joke));
+    setJoke(initialJoke);
   };
 
-  onChange = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value,
-    });
+  const onChange = (event) => {
+    setJoke({ ...joke, [event.target.name]: event.target.value });
   };
 
-  render() {
-    if (this.props.user.jwt) {
-      return (
-        <div>
-          <p className="error">{this.props.errors ? this.props.errors : null}</p>
-          <AddJokeForm
-            onSubmit={this.onSubmit}
-            onChange={this.onChange}
-            values={this.state}
-            buttonName="Add joke"
-          />
-        </div>
-      );
-    } else {
-      return null;
-    }
+  if (user.jwt) {
+    return (
+      <div>
+        <p className="error">{errors ? errors : null}</p>
+        <AddJokeForm
+          onSubmit={onSubmit}
+          onChange={onChange}
+          values={joke}
+          buttonName="Add joke"
+        />
+      </div>
+    );
+  } else {
+    return null;
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    user: state.user,
-    errors: state.errors
-  };
-}
-
-const mapDispatchToProps = { addJoke };
-
-export default connect(mapStateToProps, mapDispatchToProps)(AddJokeContainer);
+export default AddJokeContainer;
