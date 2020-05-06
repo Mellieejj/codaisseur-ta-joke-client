@@ -1,28 +1,27 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class AuthForm extends Component {
-  render() {
+export default function AuthForm (props) {
     return (
-      <form onSubmit={this.props.onSubmit}>
+      <form onSubmit={props.onSubmit}>
         <input
         className="form-control form-control-lg custom-form"
           type="text"
           placeholder="Name"
           name="name"
-          value={this.props.values.name}
-          onChange={this.props.onChange}
+          value={props.values.name}
+          onChange={props.onChange}
         />
         <input
         className="form-control form-control-lg custom-form"
           type="password"
           placeholder="Password"
           name="password"
-          value={this.props.values.password}
-          onChange={this.props.onChange}
+          value={props.values.password}
+          onChange={props.onChange}
         />
 
-        <button className="btn btn-outline-default btn-lg btn-dark" type="submit">{this.props.buttonName}</button>
+        <button className="btn btn-outline-default btn-lg btn-dark" type="submit">{props.buttonName}</button>
       </form>
     );
   }
-}
+

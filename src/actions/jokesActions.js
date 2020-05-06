@@ -22,6 +22,7 @@ export const getJoke = () => (dispatch, getState) => {
     .catch(console.error);
 };
 
+//add new joke
 const NEW_JOKE = "NEW_JOKE";
 
 function newJoke(payload) {

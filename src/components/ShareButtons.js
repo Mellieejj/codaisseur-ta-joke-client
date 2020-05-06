@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon, RedditShareButton, RedditIcon, LinkedinShareButton, LinkedinIcon } from "react-share";
 
-export default class ShareButtons extends Component {
-  render() {
-    const { joke } = this.props;
+export default function ShareButtons (props) {
+    const { joke } = props;
     const toShareJoke = joke ? joke[0].setup + " " + joke[0].punchline : null;
     return(
     <div>
@@ -40,4 +39,4 @@ export default class ShareButtons extends Component {
       </LinkedinShareButton>
     </div>)
   }
-}
+
