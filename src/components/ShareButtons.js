@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon, RedditShareButton, RedditIcon, LinkedinShareButton, LinkedinIcon } from "react-share";
 
 export default function ShareButtons (props) {
