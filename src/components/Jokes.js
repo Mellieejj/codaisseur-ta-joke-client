@@ -1,44 +1,30 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import { getJoke } from "../actions/jokesActions";
-import { connect } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import ShareButtons from "./ShareButtons";
 
-class Jokes extends Component {
-  state = {
-    timeout: false,
-    // currentJoke: null,
-  };
+function Jokes() {
+  const [jokeDelay, setJokeDelay] = useState(false);
+  const dispatch = useDispatch();
+  const joke = useSelector((state) => state.joke);
 
-  componentDidMount() {
-    this.props.getJoke();
+  useEffect(() => {
+    dispatch(getJoke());
 
     setTimeout(() => {
-      this.setState({ ...this.state, timeout: true });
+      setJokeDelay(true);
     }, 3000);
-  }
+  }, [dispatch]);
 
-  render() {
-    const { joke } = this.props;
-    return (
-      <div className="jokeContainer">
-        <div className="joke">
-          <p>{joke ? joke[0].setup : "Loading a joke for you.... "}</p>
-          <p>{this.state.timeout ? joke[0].punchline : null}</p>
-        </div>
-        <ShareButtons joke={this.props.joke} />
+  return (
+    <div className="jokeContainer">
+      <div className="joke">
+        <p>{joke ? joke[0].setup : "Loading a joke for you.... "}</p>
+        <p>{jokeDelay ? joke[0].punchline : null}</p>
       </div>
-    );
-  }
+      <ShareButtons joke={joke} />
+    </div>
+  );
 }
 
-function mapStateToProps(state) {
-  console.log("state", state.joke);
-
-  return {
-    joke: state.joke,
-  };
-}
-
-const mapDispatchToProps = { getJoke };
-
-export default connect(mapStateToProps, mapDispatchToProps)(Jokes);
+export default Jokes;

@@ -4,7 +4,7 @@ import { addJoke } from "../actions/jokesActions";
 
 import AddJokeForm from "./AddJokeForm";
 
-function AddJokeContainer(props) {
+function AddJokeContainer() {
   const initialJoke = { setup: "", punchline: "" };
   const [joke, setJoke] = useState(initialJoke);
 

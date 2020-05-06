@@ -7,8 +7,6 @@ function AuthContainer() {
   const user = useSelector((state) => state.user);
   const errors = useSelector((state) => state.errors);
 
-  // console.log("user", user);
-
   if (!user.jwt) {
     return (
       <div>
@@ -26,13 +24,4 @@ function AuthContainer() {
   }
 }
 
-// function mapStateToProps(state) {
-//   console.log("state", state.user);
-//   return {
-//     user: state.user,
-//     errors: state.errors,
-//   };
-// }
-
-// export default connect(mapStateToProps)(AuthContainer);
 export default AuthContainer;
