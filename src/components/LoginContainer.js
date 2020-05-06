@@ -1,40 +1,37 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import AuthForm from "./AuthForm";
-import { connect } from "react-redux";
+import { useDispatch } from "react-redux";
 import { login } from "../actions/userActions";
 
-class SignupContainer extends Component {
-  state = {
+function SignupContainer() {
+  const initialUser = {
     name: "",
     password: "",
   };
 
-  onSubmit = (event) => {
+  const [user, setUser] = useState(initialUser);
+  const dispatch = useDispatch();
+
+  const onSubmit = (event) => {
     event.preventDefault();
-    this.props.login(this.state);
-    this.setState({ name: "", password: "" });
+    dispatch(login(user));
+    setUser(initialUser);
   };
 
-  onChange = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value,
-    });
+  const onChange = (event) => {
+    setUser({ ...user, [event.target.name]: event.target.value });
   };
 
-  render() {
-    return (
-      <div className="auth">
-        <AuthForm
-          onSubmit={this.onSubmit}
-          onChange={this.onChange}
-          values={this.state}
-          buttonName="Login"
-        />
-      </div>
-    );
-  }
+  return (
+    <div className="auth">
+      <AuthForm
+        onSubmit={onSubmit}
+        onChange={onChange}
+        values={user}
+        buttonName="Login"
+      />
+    </div>
+  );
 }
 
-const mapDispatchToProps = { login };
-
-export default connect(null, mapDispatchToProps)(SignupContainer);
+export default SignupContainer;
