@@ -49,4 +49,5 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = { addJoke };
+
 export default connect(mapStateToProps, mapDispatchToProps)(AddJokeContainer);
