@@ -1,4 +1,4 @@
-[Deployed version:] (https://peaceful-shirley-defe62.netlify.app/)
+[Deployed version](https://peaceful-shirley-defe62.netlify.app/)
 
 
 
