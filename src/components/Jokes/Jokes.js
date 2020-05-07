@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { getJoke } from "../actions/jokesActions";
+import { getJoke } from "../../actions/jokesActions";
 import { useSelector, useDispatch } from "react-redux";
-import ShareButtons from "./ShareButtons";
+import ShareButtons from "../ShareButtons";
+import "./Jokes.scss"
 
 function Jokes() {
   const [jokeDelay, setJokeDelay] = useState(false);

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addJoke } from "../actions/jokesActions";
+import { addJoke } from "../../actions/jokesActions";
 
 import AddJokeForm from "./AddJokeForm";
 

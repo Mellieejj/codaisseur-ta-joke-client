@@ -1,8 +1,8 @@
 import React from "react";
 import store from "./store"
 import {Provider} from "react-redux"
-import NavBar from "./components/NavBar"
-import Jokes from "./components/Jokes";
+import NavBar from "./components/NavBar/NavBar"
+import Jokes from "./components/Jokes/Jokes";
 
 import "./App.css";
 

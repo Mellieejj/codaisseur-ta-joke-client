@@ -1,0 +1,9 @@
+@import "/config";
+@import "~bootstrap";
+
+body {
+  background: linear-gradient(to left, #59b18c 0%, #ff99cc 100%);
+  font-family: Roboto;
+  font-size: 2rem;
+  text-align: center;
+}

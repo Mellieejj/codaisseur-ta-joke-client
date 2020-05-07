@@ -1,6 +1,7 @@
 import React from "react";
-import AuthContainer from "./AuthContainer";
-import AddJokeContainer from "./AddJokeContainer";
+import AuthContainer from "../Auth/AuthContainer";
+import AddJokeContainer from "../AddJoke/AddJokeContainer";
+import "./NavBar.scss"
 
 function NavBar () {
   return (

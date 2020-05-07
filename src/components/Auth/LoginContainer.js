@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import AuthForm from "./AuthForm";
 import { useDispatch } from "react-redux";
-import { login } from "../actions/userActions";
+import { login } from "../../actions/userActions";
+import "./AuthContainer.scss"
 
 function SignupContainer() {
   const initialUser = {

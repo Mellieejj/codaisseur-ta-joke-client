@@ -2,6 +2,7 @@ import React from "react";
 import SignupContainer from "./SignupContainer";
 import LoginContainer from "./LoginContainer";
 import { useSelector } from "react-redux";
+import "./AuthContainer.scss"
 
 function AuthContainer() {
   const user = useSelector((state) => state.user);

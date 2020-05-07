@@ -1,44 +1,5 @@
-body {
-  background: linear-gradient(to left, #59b18c 0%, #ff99cc 100%);
-  font-family: Roboto;
-  font-size: 2rem;
-  text-align: center;
-}
 .App {
   display: flex;
-}
-.navbar {
-  color: #ffffff;
-  display: block;
-  width: 20%;
-}
-
-.title {
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 2.5rem;
-}
-
-.jokeContainer {
-  width: 70%;
-  display: inline-block;
-  align-self: center;
-  margin: 10% auto;
-}
-
-.jokeContainer p {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-.joke {
-  border: 1px solid #008080;
-  border-radius: 25px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: rgba(252, 252, 252, 0.75);
-}
-
-.auth {
-  margin-top: 10px;
 }
 
 
