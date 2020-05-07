@@ -1,7 +1,7 @@
 import request from "superagent";
 
 // const baseUrl = "http://localhost:4000";
-const baseUrl = "https://floating-harbor-87574.herokuapp.com/"
+const baseUrl = "https://floating-harbor-87574.herokuapp.com"
 
 //add error
 export const ERROR_MESSAGE = "ERROR_MESSAGE";

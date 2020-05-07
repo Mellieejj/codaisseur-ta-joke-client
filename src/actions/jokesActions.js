@@ -2,7 +2,7 @@ import request from "superagent";
 import { removeError, displayError } from "./userActions";
 
 // const baseUrl = "http://localhost:4000";
-const baseUrl = "https://floating-harbor-87574.herokuapp.com/"
+const baseUrl = "https://floating-harbor-87574.herokuapp.com"
 
 //get random joke from api
 export const RANDOM_JOKE = "RANDOM_JOKE";
