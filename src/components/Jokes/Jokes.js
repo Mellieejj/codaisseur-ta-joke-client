@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { getJoke } from "../../actions/jokesActions";
 import { useSelector, useDispatch } from "react-redux";
 import ShareButtons from "../ShareButtons";
-import "./Jokes.scss"
+import { BallPulseSync } from "react-pure-loaders";
+import "./Jokes.scss";
 
 function Jokes() {
   const [jokeDelay, setJokeDelay] = useState(false);
@@ -20,7 +21,7 @@ function Jokes() {
   return (
     <div className="jokeContainer">
       <div className="joke">
-        <p>{joke ? joke[0].setup : "Loading a joke for you.... "}</p>
+        <p>{joke ? joke[0].setup : <BallPulseSync color="#59b18c" loading={true}/>}</p>
         <p>{jokeDelay ? joke[0].punchline : null}</p>
       </div>
       <ShareButtons joke={joke} />
