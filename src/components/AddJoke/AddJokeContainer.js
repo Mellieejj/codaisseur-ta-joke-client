@@ -8,8 +8,8 @@ function AddJokeContainer() {
   const initialJoke = { setup: "", punchline: "" };
   const [joke, setJoke] = useState(initialJoke);
 
-  const user = useSelector((state) => state.user);
-  const errors = useSelector((state) => state.errors);
+  const {user, errors}  = useSelector((state) => state);
+  
   const dispatch = useDispatch()
   
   const onSubmit = (event) => {
